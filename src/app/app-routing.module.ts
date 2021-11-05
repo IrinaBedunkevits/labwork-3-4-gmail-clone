@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'tabs',
     pathMatch: 'full'
   },
   {
@@ -32,6 +32,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
   }
 ];
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
